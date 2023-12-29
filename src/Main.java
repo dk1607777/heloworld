@@ -1,104 +1,99 @@
+import java.text.NumberFormat;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Привет мир!");
-        System.out.println("Hello World!");
-        int i = 1000000;
-        System.out.println("значение переменой " + " i " + "с типом " + "int " + "равно " + i );
-        byte b = 12;
-        System.out.println("значение переменой" + " b" + " с типом" + " dyte " +  "равно" + b );
-        short s = 32767;
-        System.out.println("значение переменой " + "s " + "с типом " + "short " + "равно "+ s);
-        long l = 923372036854775806L;
-        System.out.println("значение переменой "+ "l" + "с типом " + "long " + "равно "+ l );
-        float f = -1.01f;
-        System.out.println("значение переменой " + "f " + "с типом "+ "f " + "равно" + f );
-        double d = 1.1111111;
-        System.out.println("значениепеременой "+ "d "+ "с типом " + "d " + "равно "+ d );
-        float fd = 27.12f;
-        System.out.println(fd);
-        long lk = 987678965549l;
-        System.out.println(lk);
-        double ds = 2.786;
-        System.out.println(ds);
-        short sa = 569;
-        System.out.println(sa);
-        int in = -159;
-        System.out.println(in);
-        int nt = 27897;
-        System.out.println(nt);
-        byte bv = 67;
-        System.out.println(bv);
-        byte lp = 23;
-        byte ac = 27;
-        byte ea = 30;
-        int numberStudents = lp + ac + ea ;
-        int SheetsPaper = 480;
-        System.out.println("на каждого ученика рассчитано " + (SheetsPaper / numberStudents) + " листов бумаги");
-        short bottle2 = 16;
-        int oneMinute = bottle2 / 2;
-        System.out.println(oneMinute);
-        short minutes20 = 20;
-        int day =  60 * 24;
-        System.out.println(day);
-        int day3 = day * 3;
-        System.out.println(day3);
-        int month = day * 30;
-        System.out.println(month);
-        int bottle20 = bottle2 * 10;
-        System.out.println("за " + minutes20 + " машина производит " + (oneMinute * minutes20) + " бутылок");
-        System.out.println("за " + day + " машина производит " + (day * oneMinute) + " бутылок ");
-        System.out.println("за " + day3 + " машина производит " + (day3 * oneMinute) + " бутылок");
-        System.out.println("за " + month + " машина производит " + (month * oneMinute) + " бутылок");
-        int totalPaint = 120;
-        int  white = 2;
-        int brown = 4;
-        int oneClass = white +brown;
-        System.out.println(oneClass);
-        int totalClasses = totalPaint / oneClass;
-        System.out.println(totalClasses);
-        int totalWhite = totalClasses * white;
-        System.out.println(totalWhite);
-        int totalBrown = totalClasses * brown;
-        System.out.println(totalBrown);
-        System.out.println("В школе,где " + totalClasses + " классов ,нужно "  + totalWhite + " банок белой краски и " + totalBrown + " банок коричневой краски ");
-        int bananas = 5*80;
-        System.out.println(bananas);
-        int milk = 105*2;
-        System.out.println(milk);
-        int iceCream = 100 *2;
-        System.out.println(iceCream);
-        int eggs = 4*70;
-        System.out.println(eggs);
-        int grams = bananas + milk + eggs;
-        System.out.println(grams );
-        float kilogram = grams / 100f;
-         System.out.println(kilogram);
-         int totalKilogram = 7 *1000;
-         System.out.println(totalKilogram);
-         int day1 = 250;
-         System.out.println("спортсен похудеет на 7 кг за " + (totalKilogram / day1));
-         int day2 = 500;
-         System.out.println("спортсмен похудеет на 7 кг за " + ( totalKilogram / day2));
-         int averageDay = 28+14;
-         System.out.println(averageDay);
-         System.out.println( "в среднем потребуется дней для достижения результата " + (averageDay / 2) );
-         int m = 67760;
-         int m1 = (m/100) *10;
-         System.out.println(m1);
-         int m2 = m + m1;
-         System.out.println(m2);
-         System.out.println("маша теперь получает " + m2 + " рублей.Годовой доход вырос на " + m1 + " рублей");
-         int d3 = 83690;
-         int d1 = (d3 /100) *10;
-         System.out.println(d1);
-         int d2 = d3 + d1;
-         System.out.println(d2);
-         System.out.println("денис теперь получает " + d2 + " рублей .Годовой доход вырос нв " + d1 + " рублей");
-         int k = 76230;
-         int k1 = (k /100) *10;
-         System.out.println(k1);
-         int k2 = k + k1;
-         System.out.println(k2);
-         System.out.println("кристина теперь получает " + k2 + " рублей .Годовой доход вырос на"  +k1 +" рублей");
+
+        System.out.println("Hello world!");
+        System.out.println( "задача 1");
+    int total= 2_459_000;
+    int deposit = 15_000;
+    double sum =0;
+    int month=1;
+    double percent = 0.01;
+    while ( sum < total ) {
+        sum= (1 + percent) *sum;
+        sum= sum + deposit;
+        System.out.println("Месяц " + month + ", сумма накоплений равна " +sum + " рублнй");
+        month++;
+
+        }
+        System.out.println("задача 2");
+    int number = 0;
+    while (number < 10) {
+        number++;
+        System.out.print(number +" ");
+    }
+        System.out.println();
+    for (; number >= 1; number--) {
+        System.out.print(number + " ");
+    }
+        System.out.println();
+
+        System.out.println("задача 3");
+        int population = 12_000_000;
+        int fartlityPerThousand = 17;
+        int mortalityPerThousand =8;
+        int startYear = 2023;
+        for (int year = startYear; year < startYear +10; year ++) {
+            population = population+fartlityPerThousand * population / 1_000 - mortalityPerThousand * population / 1_000;
+            System.out.println(" Год " +  year + ",численость населения составляет " +population);
+        }
+        System.out.println();
+
+        System.out.println("задача 4 ");
+
+        NumberFormat numberFormat= NumberFormat.getCurrencyInstance();
+        total=12_000_000;
+        sum = 15_000;
+        percent = 0.07;
+        month =1;
+        while ( sum < total) {
+            sum= sum +percent * sum;
+            System.out.printf("Месяц %d, сумма накоплений равна %s%n" , month , numberFormat .format(sum));
+            month++;
+
+        }
+        System.out.println( "задача 5 ");
+        sum =15_000;
+        month = 1;
+        while ( sum <total) {
+            sum = sum + percent * sum;
+            if (month % 6 == 0) {
+                System.out.printf("Месяц %d, сумма накоплений равна %s%n ", month, numberFormat.format(sum));
+            }
+            month++;
+        }
+        System.out.println(" задача 6 ");
+        sum = 15_000;
+        month = 1;
+        int months = 12 * 9;
+        while (month <= months) {
+            sum = sum+ percent * sum;
+            if( month % 6 ==0) {
+                System.out.printf("Месяц %d ,сумма накоплений равна %s%n" , month, numberFormat.format(sum));
+            }
+            month++;
+        }
+        System.out.println( "задача 7");
+        int firstFridayAtTheMonth =3;
+        for (int day= firstFridayAtTheMonth;day<=31; day+=7) {
+            if (day%7 == firstFridayAtTheMonth) {
+
+            }
+            System.out.println(" Сегодня пятница ," + day + "-e число . Необходимо подготовить отчет ");
+        }
+        System.out.println("задача 8");
+        int period = 79;
+        int currentYear = 2023;
+        int start = currentYear -200;
+        int end= currentYear +100;
+        for( int year = 0 ;year<=end; year+=period) {
+            if(year >=start) {
+                System.out.println(year);
+            }
+        }
+
+
+
     }
 }
