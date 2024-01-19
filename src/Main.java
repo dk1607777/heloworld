@@ -1,99 +1,95 @@
 import java.text.NumberFormat;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
-        System.out.println( "задача 1");
-    int total= 2_459_000;
-    int deposit = 15_000;
-    double sum =0;
-    int month=1;
-    double percent = 0.01;
-    while ( sum < total ) {
-        sum= (1 + percent) *sum;
-        sum= sum + deposit;
-        System.out.println("Месяц " + month + ", сумма накоплений равна " +sum + " рублнй");
-        month++;
 
+        System.out.println("задача 1");
+        int[] arr1 = new int[3];
+        arr1[0] = 1;
+        arr1[1] = 2;
+        arr1[2] = 3;
+        for (int i = 0; i <= arr1.length - 1; i++) {
+            System.out.printf(arr1[i] + ",");
         }
-        System.out.println("задача 2");
-    int number = 0;
-    while (number < 10) {
-        number++;
-        System.out.print(number +" ");
-    }
+
         System.out.println();
-    for (; number >= 1; number--) {
-        System.out.print(number + " ");
-    }
+
+        double[] arr2 = new double[3];
+
+        arr2[0] = 1.57;
+        arr2[1] = 7.654;
+        arr2[2] = 9.986;
+        System.out.printf(arr2[0] + "," + arr2[1] + "," + arr2[2]);
+
         System.out.println();
+
+        int[] arr3 = new int[4];
+        arr3[0] = 1;
+        arr3[1] = 3;
+        arr3[2] = 5;
+        arr3[3] = 7;
+        for (int i = 0; i <= arr3.length - 1; i++) {
+            System.out.printf(arr3[i] + ",");
+        }
+        System.out.println();
+
+        System.out.println("задание 2 ");
+        int[] arr7 = new int[3];
+        arr7[0] = 1;
+        arr7[1] = 2;
+        arr7[2] = 3;
+        System.out.printf(arr7[0] + "," + arr7[1] + "," + arr7[2]);
+
+        System.out.println();
+        int[] arr9 = new int[4];
+        arr9[0] = 1;
+        arr9[1] = 3;
+        arr9[2] = 5;
+        arr9[3] = 7;
+        System.out.println(arr9[0] + "," + arr9[1] + "," + arr9[2] + "," + arr9[3]);
+
+        double[] arr8 = new double[3];
+        arr8[0] = 1.57;
+        arr8[1] = 7.654;
+        arr8[2] = 9.986;
+        System.out.println(arr8[0] + "," + arr8[1] + "," + arr8[2]);
+
 
         System.out.println("задача 3");
-        int population = 12_000_000;
-        int fartlityPerThousand = 17;
-        int mortalityPerThousand =8;
-        int startYear = 2023;
-        for (int year = startYear; year < startYear +10; year ++) {
-            population = population+fartlityPerThousand * population / 1_000 - mortalityPerThousand * population / 1_000;
-            System.out.println(" Год " +  year + ",численость населения составляет " +population);
-        }
-        System.out.println();
-
-        System.out.println("задача 4 ");
-
-        NumberFormat numberFormat= NumberFormat.getCurrencyInstance();
-        total=12_000_000;
-        sum = 15_000;
-        percent = 0.07;
-        month =1;
-        while ( sum < total) {
-            sum= sum +percent * sum;
-            System.out.printf("Месяц %d, сумма накоплений равна %s%n" , month , numberFormat .format(sum));
-            month++;
-
-        }
-        System.out.println( "задача 5 ");
-        sum =15_000;
-        month = 1;
-        while ( sum <total) {
-            sum = sum + percent * sum;
-            if (month % 6 == 0) {
-                System.out.printf("Месяц %d, сумма накоплений равна %s%n ", month, numberFormat.format(sum));
+        int[] arr4 = new int[3];
+        arr4[0] = 1;
+        arr4[1] = 2;
+        arr4[2] = 3;
+        System.out.println(arr4[2] + "," + arr4[1] + "," + arr4[0]);
+        double[] arr5 = new double[3];
+        arr5[0] = 1.57;
+        arr5[1] = 7.654;
+        arr5[2] = 9.986;
+        System.out.println(arr5[2] + "," + arr5[1] + "," + arr5[0]);
+        int[] arr6 = new int[4];
+        arr6[0] = 1;
+        arr6[1] = 3;
+        arr6[2] = 5;
+        arr6[3] = 7;
+        System.out.println(arr6[3] + "," + arr6[2] + "," + arr6[1] + "," + arr6[0]);
+        System.out.println("зфдание 4");
+        int[] arr = {1, 2, 3};
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                arr[i]++;
             }
-            month++;
-        }
-        System.out.println(" задача 6 ");
-        sum = 15_000;
-        month = 1;
-        int months = 12 * 9;
-        while (month <= months) {
-            sum = sum+ percent * sum;
-            if( month % 6 ==0) {
-                System.out.printf("Месяц %d ,сумма накоплений равна %s%n" , month, numberFormat.format(sum));
-            }
-            month++;
-        }
-        System.out.println( "задача 7");
-        int firstFridayAtTheMonth =3;
-        for (int day= firstFridayAtTheMonth;day<=31; day+=7) {
-            if (day%7 == firstFridayAtTheMonth) {
-
-            }
-            System.out.println(" Сегодня пятница ," + day + "-e число . Необходимо подготовить отчет ");
-        }
-        System.out.println("задача 8");
-        int period = 79;
-        int currentYear = 2023;
-        int start = currentYear -200;
-        int end= currentYear +100;
-        for( int year = 0 ;year<=end; year+=period) {
-            if(year >=start) {
-                System.out.println(year);
-            }
-        }
+                System.out.println(arr[i] +",");
 
 
+
+
+        }
 
     }
+
+
 }
+
+
