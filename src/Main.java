@@ -1,37 +1,65 @@
-import java.text.NumberFormat;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
+        int yearToCheck = 2024;
+        checkLeepYear(yearToCheck);
+        int clientDeviceYear =2015;
+        int clientIOS = 0;
+        task2(clientDeviceYear,clientIOS);
+        int deliveryDistance = 95;
+        int deliverDays = calculateDeLiveryDays (deliveryDistance);
+        printDeliveryDays(deliverDays);
+
+    }
+    public static void checkLeepYear(int year){
+        if((year % 4==0&& year % 100!=0) ||(year%400==0)) {
+            System.out.println(year + "год - високосный год");
+        } else {
+            System.out.println(year + "год - невисокосный год ");
+        }
+
+    }
+
+    public static void task2 (int clientDeviceYear, int clientIOS) {
+        clientIOS = 0;
+     int clientAndroid = 1;
+     if (clientIOS ==0 ){
+         if (clientDeviceYear>=2015) {
+             System.out.println("скачайте приложение для iOS ");
+         } else {
+             System.out.println("установите облегченую версию приложения для IOS по ссылке ");
+         }
+     }else if (clientIOS ==1){
+         if (clientDeviceYear>= 2015 ) {
+             System.out.println( " установите облегченую версию приложения для Android по сылке ");
+         }else {
+             System.out.println( "операционная система не поддерживается ");
+         }
+
+     }
+
+    }
+    public static int calculateDeLiveryDays(int distance) {
+        int result = 1;
+        if(distance >20){
+            result++;
+        }
+        if(distance>60){
+            result++;
+        }
+        if(distance>100){
+            result= -1;
+        }
+        return result;
+    }
+    public static void printDeliveryDays(int deliveryDays){
+        if(deliveryDays<1){
+            System.out.println("доставки");
+        }else {
+            System.out.println("потребуется дней " + deliveryDays);
+        }
     }
 
 
-    public static void task1() {
-       String firstName = "Ivan" ;
-       String middleName = "Ivanovich";
-       String lastName = "Ivanov";
-       String fullName = lastName +" " + firstName + " " +middleName;
-        System.out.println("Ф.И.О. сотрудника-"+ fullName);
-    }
-    public static void task2(){
-        String firstName = "Ivan";
-        String middleName = "Ivanovich";
-        String lastName = "Ivanov";
-        String fullName = lastName + " " +firstName + " " + middleName;
-        fullName = fullName.toUpperCase();
-        System.out.println("Данные Ф.И.О. сотруднимка для заполнение отчета " + fullName);
-    }
-    public static void task3(){
-        String lastName = "Иванов";
-        String firstName = "Семён";
-        String middleName = "семёнович";
-        String fullName = lastName + " "+ firstName + " " +middleName;
-        fullName = fullName.replace( 'ё', 'е');
-        System.out.println("Данные Ф.И.О.сотруднимка -" + fullName);
-    }
 
 }
 
